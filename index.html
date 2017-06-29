@@ -16,6 +16,24 @@
   <script src="./Scripts/lib/SoundJS/lib/soundjs-0.6.2.min.js"></script>
   <script src="./Scripts/lib/PreloadJS/lib/preloadjs-0.6.2.min.js"></script>
 
+
+<script src="./Scripts/utilities/bitManifest.js"> </script>
+<script src = "./Scripts/UI/cosmicEscape.js"> </script>
+  
+
+
+  <script>
+  
+//Referencing Global Variable? Trouble finding where it fits
+
+  window.game = window.game || {};
+
+
+  function init() {
+     window.game = window.game || {};
+      window.game = new game.CosmicEscape();
+} </script>
+
 </body>
 </html>
 
