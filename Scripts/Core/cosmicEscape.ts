@@ -1,5 +1,6 @@
 
 (function () {
+    
   let canvas:HTMLElement;
   let stage:createjs.Stage;
 
@@ -22,5 +23,5 @@ function cosmicEscape(){
 
 }
 
-
+window.onload = Start;
 }());

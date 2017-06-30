@@ -14,5 +14,6 @@
     function cosmicEscape() {
         console.log("fucl");
     }
+    window.onload = Start;
 }());
 //# sourceMappingURL=cosmicEscape.js.map
