@@ -1,7 +1,7 @@
 (function (window) {
     window.game = window.game || {};
     function CosmicEscape() {
-        this.initialize();
+        window.console.log('we go motion');
     }
     window.game.CosmicEscape = CosmicEscape;
 }(window));

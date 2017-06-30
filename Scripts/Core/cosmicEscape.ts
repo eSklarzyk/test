@@ -3,14 +3,10 @@
 
 (<any>window).game = (<any>window).game || {};
 
-
 function CosmicEscape(){
-     
-    this.initialize();
+     window.console.log('we go motion');
+  
 }
-
-
-
 
 
 

@@ -1,6 +1,6 @@
-abstract class bitMan extends createjs.Bitmap { //use for preload?
- data: any = {
-      images: ["./Assets/Sprites/TexturePackerV.png"],
+/* export class  bitMan extends createjs.Bitmap {
+   data:any ={
+ images: ["./Assets/Sprites/TexturePackerV.png"],
       frames: [
         [1, 1, 151, 118, 0, 0, 0],
         [154, 1, 99, 75, 0, 0, 0],
@@ -17,7 +17,7 @@ abstract class bitMan extends createjs.Bitmap { //use for preload?
         [47, 327, 9, 33, 0, 0, 0]
       ],
 
-      animations:  {
+      animations:   {
         "shield": { frames: [0] },
         "player": { frames: [1] },
         "meteorBig": { frames: [2] },
@@ -32,28 +32,16 @@ abstract class bitMan extends createjs.Bitmap { //use for preload?
         "laserGreen": { frames: [11] },
         "laserRed": { frames: [12] }
       }
-}}
-
-module bitMan {
-
-    export class mainMenu {
-   
-
+      //constructor (info:any){this.data = info:string}
+   }
 }
 
-
-export class Player {
-
-}
-export class Background {
-
-}
-
+export class Player extends bitMan {
 
 
 }
 
-
+*/
 
 
 
