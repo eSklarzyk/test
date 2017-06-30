@@ -1,20 +1,26 @@
 
-(function (window) {
+(function () {
+  let canvas:HTMLElement;
+  let stage:createjs.Stage;
 
-(<any>window).game = (<any>window).game || {};
 
-function CosmicEscape(){
-     console.log('we go motion');
-  
+function Start(){
+
+    let canvas = document.getElementById("canvas");
+    stage = new createjs.Stage(canvas);
+    createjs.Ticker.framerate = 60;
+    createjs.Ticker.on("tick", Update);
+    
+    cosmicEscape();
+}
+function Update (){
+stage.update();
+}
+
+function cosmicEscape(){
+    console.log("fucl");
+
 }
 
 
-
-
-
-
-
-
-(<any>window).game.CosmicEscape = CosmicEscape;
-
-}(window));
+}());

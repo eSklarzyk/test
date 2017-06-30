@@ -1,8 +1,18 @@
-(function (window) {
-    window.game = window.game || {};
-    function CosmicEscape() {
-        console.log('we go motion');
+(function () {
+    var canvas;
+    var stage;
+    function Start() {
+        var canvas = document.getElementById("canvas");
+        stage = new createjs.Stage(canvas);
+        createjs.Ticker.framerate = 60;
+        createjs.Ticker.on("tick", Update);
+        cosmicEscape();
     }
-    window.game.CosmicEscape = CosmicEscape;
-}(window));
+    function Update() {
+        stage.update();
+    }
+    function cosmicEscape() {
+        console.log("fucl");
+    }
+}());
 //# sourceMappingURL=cosmicEscape.js.map
