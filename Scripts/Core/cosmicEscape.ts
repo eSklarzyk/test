@@ -4,7 +4,7 @@
 (<any>window).game = (<any>window).game || {};
 
 function CosmicEscape(){
-     window.console.log('we go motion');
+     console.log('we go motion');
   
 }
 
