@@ -7,12 +7,13 @@
         createjs.Ticker.framerate = 60;
         createjs.Ticker.on("tick", Update);
         cosmicEscape();
+        Update();
     }
     function Update() {
         stage.update();
     }
     function cosmicEscape() {
-        console.log("fucl");
+        Update();
     }
     window.onload = Start;
 }());

@@ -13,13 +13,18 @@ function Start(){
     createjs.Ticker.on("tick", Update);
     
     cosmicEscape();
+    Update();
 }
+
 function Update (){
 stage.update();
+
 }
 
 function cosmicEscape(){
-    console.log("fucl");
+    
+   
+Update();
 
 }
 

@@ -1,5 +1,5 @@
-/* export class  bitMan extends createjs.Bitmap {
-   data:any ={
+ export class bitMan extends createjs.SpriteSheet {
+   data: any = {
  images: ["./Assets/Sprites/TexturePackerV.png"],
       frames: [
         [1, 1, 151, 118, 0, 0, 0],
@@ -30,18 +30,17 @@
         "meteorSmall": { frames: [9] },
         "laserRedShot": { frames: [10] },
         "laserGreen": { frames: [11] },
-        "laserRed": { frames: [12] }
-      }
-      //constructor (info:any){this.data = info:string}
-   }
-}
+        "laserRed": { frames: [12] },
 
-export class Player extends bitMan {
+        constructor (name:string) {this.data = name;}
+  }
+   }}
+
+export class Player extends bitMan {sprite:any = new createjs.SpriteSheet(name);} 
 
 
-}
 
-*/
+
 
 
 
