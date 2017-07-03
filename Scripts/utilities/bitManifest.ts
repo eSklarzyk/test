@@ -34,15 +34,14 @@
 
         constructor (name:string) {this.data = name;}
   }
-   }}
+   }
+}
 
-export class Player extends bitMan {sprite:any = new createjs.SpriteSheet(name);} 
+export class Player extends bitMan {
+  pl = document.createElement ("player");
+  
+  
 
-
-
-
-
-
-
+}
 
 

@@ -56,9 +56,7 @@ exports.bitMan = bitMan;
 var Player = (function (_super) {
     __extends(Player, _super);
     function Player() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.sprite = new createjs.SpriteSheet(name);
-        return _this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     return Player;
 }(bitMan));
