@@ -1,32 +1,40 @@
 
-(function () {
-    
-  let canvas:HTMLElement;
-  let stage:createjs.Stage;
+(function (window) {
+   
+ 
+ function cosmicEscape(){
+
+   console.log ("essd");
+ }
+ 
+ 
+ window.onload = cosmicEscape;
+ 
+ /*  var canvas:HTMLElement;
+  var stage:createjs.Stage;
 
 
-function Start(){
+function Start():void {
 
-    let canvas = document.getElementById("canvas");
+  canvas = document.getElementById("canvas");
     stage = new createjs.Stage(canvas);
     createjs.Ticker.framerate = 60;
     createjs.Ticker.on("tick", Update);
     
     cosmicEscape();
-    Update();
+  
 }
 
-function Update (){
+function Update (event:createjs.Event):void {
 stage.update();
-
 }
 
 function cosmicEscape(){
-    
-   
-Update();
 
 }
 
 window.onload = Start;
-}());
+
+*/
+
+}(window));

@@ -33,15 +33,8 @@
         "laserRed": { frames: [12] },
 
         constructor (name:string) {this.data = name;}
-  }
-   }
+  }}
+spritesheet: any = new createjs.SpriteSheet(this.data); 
+player = new createjs.Sprite (this.data,"player");
 }
-
-export class Player extends bitMan {
-  pl = document.createElement ("player");
-  
-  
-
-}
-
 
