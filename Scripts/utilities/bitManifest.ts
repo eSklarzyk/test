@@ -30,11 +30,18 @@
         "meteorSmall": { frames: [9] },
         "laserRedShot": { frames: [10] },
         "laserGreen": { frames: [11] },
-        "laserRed": { frames: [12] },
-
-        constructor (name:string) {this.data = name;}
-  }}
-spritesheet: any = new createjs.SpriteSheet(this.data); 
-player = new createjs.Sprite (this.data,"player");
+        "laserRed": { frames: [12] }
+      },
+    constructor (name:string) {return this.data = name;}  
+   
+   }
+get img(){
+  return this.data
 }
+
+}
+ 
+
+
+
 

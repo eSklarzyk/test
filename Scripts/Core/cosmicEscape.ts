@@ -1,14 +1,13 @@
 
 (function (window) {
    
- 
- function cosmicEscape(){
+ function Start(){
 
-   console.log ("essd");
+
+
  }
  
- 
- window.onload = cosmicEscape;
+ window.onload = Start;
  
  /*  var canvas:HTMLElement;
   var stage:createjs.Stage;
