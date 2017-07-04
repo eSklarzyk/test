@@ -12,6 +12,8 @@ MAIN_MENU : 0,
 RUN_SCENE: 1,
 GAME:10,
 GAME_OVER:20
+
+current
 }
 
 GameStateEvents:any = {
