@@ -32,7 +32,7 @@ createjs.EventDispatcher.initialize(CosmicEscape);
   }
  
  
- var p = CosmicEscape.prototype;
+ var p = CosmicEscape.prototype; //class 
  
  p.initialize = function () {
     canvas = document.getElementById("canvas");
