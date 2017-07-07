@@ -1,4 +1,4 @@
- export class bitMan extends createjs.SpriteSheet {
+ /*export abstract class bitMan extends createjs.SpriteSheet {
    data: any = {
  images: ["./Assets/Sprites/TexturePackerV.png"],
       frames: [
@@ -37,11 +37,14 @@
    }
 get img(){
   return this.data
-}
+}}
+
+export abstract class Player implements bitMan {
+  data = "player";
 
 }
  
-
+*/
 
 
 
