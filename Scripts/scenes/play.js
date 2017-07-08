@@ -12,74 +12,88 @@ var scenes;
 (function (scenes) {
     var Play = (function (_super) {
         __extends(Play, _super);
+        //private _clouds: objects.Cloud[];
+        // private _collision: managers.Collision;
+        //  private _scoreLabel: objects.Label;
+        // private _livesLabel: objects.Label;
+        // private _engineSound: createjs.AbstractSoundInstance;
+        /**
+         * Creates an instance of Menu.
+         *
+         */
         function Play() {
-            return _super !== null && _super.apply(this, arguments) || this;
+            return _super.call(this) || this;
         }
+        /*
+                private _updateScoreBoard() {
+                    this._livesLabel.text = "Lives: " + core.lives;
+                    this._scoreLabel.text = "Score: " + core.score;
+                }
+        */
+        /**
+         *
+         */
+        Play.prototype.Start = function () {
+            // ocean object
+            this._backgr = new objects.Backgr("background");
+            this.addChild(this._backgr);
+            // island object
+            // player object
+            this._player = new objects.Player("player");
+            this.addChild(this._player);
+            // this._engineSound = createjs.Sound.play("engine");
+            //this._engineSound.loop = -1;
+            /*
+                        // cloud array
+                        this._clouds = new Array<objects.Cloud>();
+                        for (let count = 0; count < 3; count++) {
+                            this._clouds.push(new objects.Cloud("cloud"));
+                            this.addChild(this._clouds[count]);
+                        }
+            
+                        // include a collision managers
+                        this._collision = new managers.Collision();
+            
+                        // add lives and score label
+                        this._livesLabel = new objects.Label("Lives: " + core.lives, "40px", "Dock51", "#FFFF00", 10, 5, false);
+                        this.addChild(this._livesLabel);
+            
+                        this._scoreLabel = new objects.Label("Score: " + core.score, "40px", "Dock51", "#FFFF00", 350, 5, false);
+                        this.addChild(this._scoreLabel);
+            */
+            // add this scene to the global scene container
+            core.stage.addChild(this);
+        };
+        Play.prototype.Update = function () {
+            this._backgr.update();
+            // this._island.update();
+            this._player.update();
+            //  this._collision.check(this._player, this._island);
+            /*
+                        // update each cloud
+                        this._clouds.forEach(cloud => {
+                            cloud.update();
+                            this._collision.check(this._player, cloud);
+                        });
+            
+                        this._updateScoreBoard();
+            
+                        if (core.lives < 1) {
+                            this._engineSound.stop();
+                            core.scene = config.Scene.OVER;
+                            core.changeScene();
+                        }
+                    }
+            */
+            // EVENT HANDLERS ++++++++++++++++
+        };
+        Play.prototype._startButtonClick = function (event) {
+            // Switch the scene
+            core.scene = config.Scene.OVER;
+            core.changeScene();
+        };
         return Play;
     }(objects.Scene));
     scenes.Play = Play;
-    function Start() {
-        stage = new createjs.Stage(canvas); // create a stage container
-        createjs.Ticker.framerate = 60;
-        createjs.Ticker.on("tick", Update); // call Update every frame
-        /*data = {
-          images: ["./Assets/Sprites/TexturePackerV.png"],
-          frames: [
-            [1, 1, 151, 118, 0, 0, 0],
-            [154, 1, 99, 75, 0, 0, 0],
-            [1, 121, 136, 111, 0, 0, 0],
-            [154, 78, 99, 75, 0, 0, 0],
-            [1, 234, 91, 91, 0, 0, 0],
-            [139, 155, 90, 77, 0, 0, 0],
-            [94, 234, 90, 77, 0, 0, 0],
-            [94, 313, 98, 50, 0, 0, 0],
-            [186, 234, 56, 54, 0, 0, 0],
-            [1, 327, 44, 42, 0, 0, 0],
-            [194, 290, 56, 54, 0, 0, 0],
-            [231, 155, 9, 33, 0, 0, 0],
-            [47, 327, 9, 33, 0, 0, 0]
-          ],
-    
-          animations: {
-            shield: { frames: [0] },
-            player: { frames: [1] },
-            meteorBig: { frames: [2] },
-            playerDamaged: { frames: [3] },
-            enemyUFO: { frames: [4] },
-            playerLeft: { frames: [5] },
-            playerRight: { frames: [6] },
-            enemyShip: { frames: [7] },
-            laserGreenShot: { frames: [8] },
-            meteorSmall: { frames: [9] },
-            laserRedShot: { frames: [10] },
-            laserGreen: { frames: [11] },
-            laserRed: { frames: [12] }
-          },
-        }
-    
-        _Data = new createjs.SpriteSheet(data);
-        player = new createjs.Sprite(_Data, "player");
-        bullet = new createjs.Sprite(_Data, "laserRed");
-        asteroid = new createjs.Sprite(_Data, "meteorSmall");*/
-        Main();
-    }
-    // Game Loop - triggers every frame
-    function Update() {
-        bullet.giveData(stage.mouseX, stage.mouseY);
-        player.giveData(stage.mouseX, stage.mouseY);
-        player.Update();
-        bullet.Update();
-        stage.update(); // refresh the stage
-    }
-    function Main() {
-        asteroid = new objects._Asteroid();
-        stage.addChild(asteroid);
-        bullet = new objects._Bullet();
-        stage.addChild(bullet);
-        player = new objects._Player();
-        stage.addChild(player);
-    }
-    window.onload = Start;
 })(scenes || (scenes = {}));
-();
 //# sourceMappingURL=play.js.map

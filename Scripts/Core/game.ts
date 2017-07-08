@@ -44,11 +44,11 @@ namespace core {
 
     // asset manifest for images and sounds
     let assetData: objects.Asset[] = [
-        { id: "backgr", src: "../../Assets/images/" },
+        { id: "backgr", src: "../../Assets/images/background.png" },
         { id: "atlas", src: "../../Assets/images/atlas.png" },
-        { id: "thunder", src: "../../Assets/audio/thunder.ogg" },
-        { id: "yay", src: "../../Assets/audio/yay.ogg" },
-        { id: "engine", src: "../../Assets/audio/engine.ogg" }
+        { id: "player", src: "../../Assets/images/player.png" }
+       // { id: "yay", src: "../../Assets/audio/yay.ogg" },
+       // { id: "engine", src: "../../Assets/audio/engine.ogg" }
     ];
 
 
@@ -113,7 +113,7 @@ namespace core {
         };
 
         // added textureAtlas
-        //textureAtlas = new createjs.SpriteSheet(atlasData);
+        let textureAtlas = new createjs.SpriteSheet(atlasData);
 
         // setup the default scene
         scene = config.Scene.MENU;

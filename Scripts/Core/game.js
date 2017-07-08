@@ -27,11 +27,11 @@ var core;
     var play;
     // asset manifest for images and sounds
     var assetData = [
-        { id: "backgr", src: "../../Assets/images/" },
+        { id: "backgr", src: "../../Assets/images/background.png" },
         { id: "atlas", src: "../../Assets/images/atlas.png" },
-        { id: "thunder", src: "../../Assets/audio/thunder.ogg" },
-        { id: "yay", src: "../../Assets/audio/yay.ogg" },
-        { id: "engine", src: "../../Assets/audio/engine.ogg" }
+        { id: "player", src: "../../Assets/images/player.png" }
+        // { id: "yay", src: "../../Assets/audio/yay.ogg" },
+        // { id: "engine", src: "../../Assets/audio/engine.ogg" }
     ];
     /**
      * This method preloads assets for the game
@@ -85,7 +85,7 @@ var core;
             }
         };
         // added textureAtlas
-        //textureAtlas = new createjs.SpriteSheet(atlasData);
+        var textureAtlas = new createjs.SpriteSheet(atlasData);
         // setup the default scene
         core.scene = config.Scene.MENU;
         changeScene();

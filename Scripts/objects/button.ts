@@ -22,7 +22,7 @@ module objects {
      * @extends {createjs.Bitmap}
      */
     export class Button extends createjs.Sprite {
-
+ 
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**
          * Creates an instance of Button.
