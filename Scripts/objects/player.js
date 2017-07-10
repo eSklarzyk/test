@@ -19,27 +19,11 @@ var objects;
      */
     var Player = (function (_super) {
         __extends(Player, _super);
-        // PRIVATE INSTANCE VARIABLES ++++++++++++++++++++++++++++
-        // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++
-        // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++
-        /**
-         * Creates an instance of Island.
-         *
-         * @constructor
-         * @param {string} imageString
-         */
         function Player(imageString) {
             var _this = _super.call(this, imageString) || this;
             _this.start();
             return _this;
         }
-        /**
-        * This method checks if the object has reached its boundaries
-        *
-        * @private
-        * @method _checkBounds
-        * @returns {void}
-        */
         Player.prototype._checkBounds = function () {
             // checkbounds to stop player from going outside
             // check right bounds
@@ -51,29 +35,9 @@ var objects;
                 this.x = (0 + (this.width * 0.5));
             }
         };
-        // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++
-        /**
-         * This method is used to initialize public properties
-         * and private instance variables
-         *
-         * @public
-         * @method start
-         * @returns {void}
-         */
-        Player.prototype.start = function () {
-            this.y = 430;
-        };
-        /**
-         * This method updates the object's properties
-         * every time it's called
-         *
-         * @public
-         * @method update
-         * @returns {void}
-         */
         Player.prototype.update = function () {
             // player to follow mouse
-            this.position = new Vector2(this.x, this.y);
+            //this.position = new Vector2(this.x, this.y);
             this.x = core.stage.mouseX;
             this._checkBounds();
         };

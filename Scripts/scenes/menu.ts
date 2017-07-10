@@ -18,7 +18,7 @@ module scenes {
          */
         public Start():void {
             // Add Ocean Background
-            this._backgr = new objects.Backgr("background");
+            this._backgr = new objects.Backgr("backgr");
             this.addChild(this._backgr);
 
             // Add Menu Label
@@ -45,6 +45,7 @@ module scenes {
         public Update():void {
             // scene updates happen here...
             this._backgr.update();
+            this._startButton.updateCache();
         }
 
         // EVENT HANDLERS ++++++++++++++++

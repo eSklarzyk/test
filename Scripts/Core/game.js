@@ -1,24 +1,14 @@
 /// <reference path="_reference.ts"/>
-/**
- * @author Tom Tsiliopoulos ttsliop@my.centennialcollege.ca
- * @studentID 300818577
- * @date July 11, 2016
- * @description This file is the entry point for the game
- * @version 0.1 - Initial version of the boilerplate
- */
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 var core;
 (function (core) {
     // Variable Declarations
-    // declare textureAtlas
-    // export let textureAtlas: createjs.SpriteSheet;
     // make a reference to the canvas element
     var canvas = document.getElementById("canvas");
     // score and lives variables
     // export let score: number = 0;
     // export let highScore: number = 0;
     // export let lives: number = 5;
-    // let helloLabel: objects.Label;
+    var helloLabel;
     var startButton; // reference to our button class
     // declare scene variables
     var currentScene;
@@ -33,24 +23,12 @@ var core;
         // { id: "yay", src: "../../Assets/audio/yay.ogg" },
         // { id: "engine", src: "../../Assets/audio/engine.ogg" }
     ];
-    /**
-     * This method preloads assets for the game
-     *
-     * @method preload
-     * @returns {void}
-     */
     function preload() {
         core.assets = new createjs.LoadQueue(); // instantiates the loader
         core.assets.installPlugin(createjs.Sound);
         core.assets.on("complete", init, this);
         core.assets.loadManifest(assetData);
     }
-    /**
-     * This method is the entry point for the application
-     *
-     * @method init
-     * @return {void}
-     */
     function init() {
         core.stage = new createjs.Stage(canvas); // instatiate the stage container
         core.stage.enableMouseOver(20);
@@ -90,23 +68,11 @@ var core;
         core.scene = config.Scene.MENU;
         changeScene();
     }
-    /**
-     * This is the main game loop
-     *
-     * @method gameLoop
-     * @param {createjs.Event} event
-     * @returns {void}
-     */
     function gameLoop(event) {
         // call the scenes's update
         currentScene.Update();
         core.stage.update(); // refreshes the stage
     }
-    /**
-     * This is the startButton click event handler
-     *
-     * @param {createjs.MouseEvent} event
-     */
     function startButtonClick(event) {
         helloLabel.text = "clicked!";
     }

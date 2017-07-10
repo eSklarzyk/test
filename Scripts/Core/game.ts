@@ -1,14 +1,5 @@
 /// <reference path="_reference.ts"/>
 
-/**
- * @author Tom Tsiliopoulos ttsliop@my.centennialcollege.ca
- * @studentID 300818577
- * @date July 11, 2016
- * @description This file is the entry point for the game
- * @version 0.1 - Initial version of the boilerplate
- */
-
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 namespace core {
 
@@ -18,7 +9,7 @@ namespace core {
     export let assets: createjs.LoadQueue;
 
     // declare textureAtlas
-   // export let textureAtlas: createjs.SpriteSheet;
+    export let textureAtlas: createjs.SpriteSheet;
 
     // make a reference to the canvas element
     let canvas: HTMLElement = document.getElementById("canvas");
@@ -30,7 +21,7 @@ namespace core {
    // export let highScore: number = 0;
    // export let lives: number = 5;
 
-   // let helloLabel: objects.Label;
+    let helloLabel: objects.Label;
 
     let startButton: objects.Button; // reference to our button class
 
@@ -52,13 +43,6 @@ namespace core {
     ];
 
 
-
-    /**
-     * This method preloads assets for the game
-     * 
-     * @method preload
-     * @returns {void}
-     */
     function preload(): void {
         assets = new createjs.LoadQueue(); // instantiates the loader
         assets.installPlugin(createjs.Sound);
@@ -67,12 +51,6 @@ namespace core {
     }
 
 
-    /**
-     * This method is the entry point for the application
-     * 
-     * @method init
-     * @return {void}
-     */
     function init(): void {
         stage = new createjs.Stage(canvas); // instatiate the stage container
         stage.enableMouseOver(20);
@@ -120,13 +98,7 @@ namespace core {
         changeScene();
     }
 
-    /**
-     * This is the main game loop
-     * 
-     * @method gameLoop
-     * @param {createjs.Event} event
-     * @returns {void}
-     */
+
     function gameLoop(event: createjs.Event): void {
 
         // call the scenes's update
@@ -135,11 +107,6 @@ namespace core {
         stage.update(); // refreshes the stage
     }
 
-    /**
-     * This is the startButton click event handler
-     * 
-     * @param {createjs.MouseEvent} event
-     */
     function startButtonClick(event: createjs.MouseEvent) {
         helloLabel.text = "clicked!";
     }
@@ -167,7 +134,8 @@ namespace core {
                 currentScene = over;
                 break;
         }
-    }
+ 
+ }
 
 
 

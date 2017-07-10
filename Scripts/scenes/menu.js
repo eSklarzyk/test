@@ -24,7 +24,7 @@ var scenes;
          */
         Menu.prototype.Start = function () {
             // Add Ocean Background
-            this._backgr = new objects.Backgr("background");
+            this._backgr = new objects.Backgr("backgr");
             this.addChild(this._backgr);
             // Add Menu Label
             this._menuLabel = new objects.Label("COSMIC ESCAPE", "60px", "Dock51", "#FFFF00", 320, 240, true);
@@ -40,6 +40,7 @@ var scenes;
         Menu.prototype.Update = function () {
             // scene updates happen here...
             this._backgr.update();
+            this._startButton.updateCache();
         };
         // EVENT HANDLERS ++++++++++++++++
         Menu.prototype._startButtonClick = function (event) {

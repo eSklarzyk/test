@@ -54,6 +54,7 @@ module scenes {
         public Update():void {
             // scene updates happen here...
             this._backgr.update();
+            
         }
 
         // EVENT HANDLERS ++++++++++++++++
